@@ -26,9 +26,15 @@
               "required": true,
               "placeholder": "192.168.0.2"
             },
-            "credentials": {
-              "title": "Credentials",
-              "description": "The credentials needed to authorise connection to the device",
+            "airplayCredentials": {
+              "title": "AirPlay Credentials",
+              "description": "The credentials needed to authorise an AirPlay connection to the device",
+              "type": "string",
+              "required": true
+            },
+            "companionCredentials": {
+              "title": "Companion Credentials",
+              "description": "The credentials needed to authorise an Companion connection to the device",
               "type": "string",
               "required": true
             },
