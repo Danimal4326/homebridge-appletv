@@ -20,8 +20,8 @@ export class AppleTVAccessory {
     this.atv = pyatv.device({
       name: this.accessory.context.device.name,
       host: this.accessory.context.device.host,
-      airplayCredentials: this.accessory.context.device.credentials,
-      companionCredentials: this.accessory.context.device.credentials,
+      airplayCredentials: this.accessory.context.device.airplayCredentials,
+      companionCredentials: this.accessory.context.device.companionCredentials,
     });
 
     this.services.push(this.accessory.getService(this.platform.Service.AccessoryInformation)!
