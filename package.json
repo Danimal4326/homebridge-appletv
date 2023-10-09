@@ -37,6 +37,6 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "@sebbo2002/node-pyatv": "^4.3.3"
+    "@btk999/node-pyatv": "^4.3.3"
   }
 }
