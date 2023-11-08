@@ -1,8 +1,8 @@
 {
   "displayName": "Homebridge AppleTV",
   "name": "@danimal4326/homebridge-appletv",
-  "version": "1.1.0",
-  "description": "A short description about what your plugin does.",
+  "version": "1.1.2",
+  "description": "Exposes Apple TVs to HomeKit",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
