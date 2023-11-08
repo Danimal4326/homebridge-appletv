@@ -1,15 +1,15 @@
 {
   "displayName": "Homebridge AppleTV",
-  "name": "@hujohner/homebridge-appletv",
+  "name": "@danimal4326/homebridge-appletv",
   "version": "1.1.0",
   "description": "A short description about what your plugin does.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HuJohner/homebridge-appletv.git"
+    "url": "https://github.com/danimal4326/homebridge-appletv.git"
   },
   "bugs": {
-    "url": "https://github.com/HuJohner/homebridge-appletv/issues"
+    "url": "https://github.com/danimal4326/homebridge-appletv/issues"
   },
   "engines": {
     "node": ">=14.18.1",
