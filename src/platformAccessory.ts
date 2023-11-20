@@ -103,16 +103,16 @@ export class AppleTVAccessory {
     if (value) {
       await this.atv.turnOn();
       this.cachedPowerState = true;
-      this.platform.log.info('Set cachedPowerState: true');
+      this.platform.log.debug('Set cachedPowerState: true');
     } else {
       await this.atv.turnOff();
       this.cachedPowerState = false;
-      this.platform.log.info('Set cachedPowerState: false');
+      this.platform.log.debug('Set cachedPowerState: false');
     }
   }
 
   getCachedPowerState(): boolean {
-    this.platform.log.info('Retrieved cachedPowerState: ' + this.cachedPowerState);
+    this.platform.log.debug('Retrieved cachedPowerState: ' + this.cachedPowerState);
     return this.cachedPowerState;
   }
 
