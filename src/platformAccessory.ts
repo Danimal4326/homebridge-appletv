@@ -42,7 +42,7 @@ export class AppleTVAccessory {
       if (event instanceof Error) {
         return;
       }
-      if (event.newValue != null) {
+      if (event.newValue !== null) {
         this.powerStateService.getCharacteristic(this.platform.Characteristic.On).updateValue(event.newValue === NodePyATVPowerState.on);
         this.cachedPowerState = event.newValue === NodePyATVPowerState.on;
         this.platform.log.info(event.device.name + ': Got powerState Event: ' + event.newValue);
