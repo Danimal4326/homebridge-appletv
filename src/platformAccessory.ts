@@ -39,6 +39,7 @@ export class AppleTVAccessory {
       .onSet(this.setOn.bind(this))
       .onGet(this.getCachedPowerState.bind(this));
     this.atv.on('update:powerState', (event: NodePyATVDeviceEvent | Error) => {
+      this.platform.log.info('Got powerState Event:' + event);
       if (event instanceof Error) {
         return;
       }
