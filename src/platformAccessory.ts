@@ -1,7 +1,7 @@
 import pyatv, { NodePyATVDevice, NodePyATVDeviceEvent, NodePyATVPowerState } from '@sebbo2002/node-pyatv';
 import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
 
-import { AppleTVPlatform } from './platform';
+import { AppleTVPlatform } from './platform.js';
 
 /**
  * AppleTV Accessory

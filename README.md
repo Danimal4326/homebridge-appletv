@@ -10,6 +10,14 @@
 
 This is a Homebridge plugin that exposes Apple TVs to HomeKit, noteably the power state as a switch and optionally the device state (playing, paused, etc.) as motion sensors.
 
+## Requirements
+
+- **Homebridge 2.0** or later
+- **Node.js 22** or **24**
+- **PyATV** installed on the system
+
+> **Note:** Plugin v2.0.0 requires Homebridge 2.0. If you are using Homebridge 1.x, please use plugin v1.x.
+
 ## Installation
 
 To make this plugin work you need to install [PyATV](https://pypi.org/project/pyatv/). To ensure you did it right run

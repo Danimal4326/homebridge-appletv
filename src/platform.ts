@@ -1,14 +1,14 @@
 import { API, DynamicPlatformPlugin, Logger, PlatformAccessory, PlatformConfig, Service, Characteristic, APIEvent } from 'homebridge';
 
-import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
-import { AppleTVAccessory } from './platformAccessory';
+import { PLATFORM_NAME, PLUGIN_NAME } from './settings.js';
+import { AppleTVAccessory } from './platformAccessory.js';
 
 /**
  * AppleTVPlatform
  */
 export class AppleTVPlatform implements DynamicPlatformPlugin {
-  public readonly Service: typeof Service = this.api.hap.Service;
-  public readonly Characteristic: typeof Characteristic = this.api.hap.Characteristic;
+  public readonly Service: typeof Service;
+  public readonly Characteristic: typeof Characteristic;
 
   public readonly accessories: PlatformAccessory[] = [];
 
@@ -17,6 +17,9 @@ export class AppleTVPlatform implements DynamicPlatformPlugin {
     public readonly config: PlatformConfig,
     public readonly api: API,
   ) {
+    this.Service = this.api.hap.Service;
+    this.Characteristic = this.api.hap.Characteristic;
+
     this.log.debug('Finished initializing platform: AppleTV');
 
     this.api.on(APIEvent.DID_FINISH_LAUNCHING, () => {
@@ -39,7 +42,6 @@ export class AppleTVPlatform implements DynamicPlatformPlugin {
   }
 
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setupAccessory(device: any) {
     const uuid = this.api.hap.uuid.generate(device.name);
 
