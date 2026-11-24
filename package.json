@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danimal4326/homebridge-appletv.git"
+    "url": "git+https://github.com/danimal4326/homebridge-appletv.git"
   },
   "bugs": {
     "url": "https://github.com/danimal4326/homebridge-appletv/issues"
