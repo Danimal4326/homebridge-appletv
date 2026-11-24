@@ -36,8 +36,12 @@ export class AppleTVPlatform implements DynamicPlatformPlugin {
   }
 
   discoverDevices() {
-    for (const device of this.config.devices) {
-      this.setupAccessory(device);
+    for (const device of this.config.devices ?? []) {
+      try {
+        this.setupAccessory(device);
+      } catch (error) {
+        this.log.error(`Failed to set up ${device?.name ?? 'unnamed device'}, skipping it:`, error);
+      }
     }
   }
 

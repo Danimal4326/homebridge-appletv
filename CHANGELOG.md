@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-11-24
+
+### Fixed
+- Plugin no longer crashes when an Apple TV is unreachable (e.g. `[Errno 113] Connect call failed`) or pyatv writes to stderr. node-pyatv `error` events are now handled: a single warning is logged when a device becomes unreachable, retries are logged at debug level, and an info message is logged when it recovers. Other Apple TVs keep working.
+- Turning an unreachable Apple TV on/off now reports "No Response" in the Home app instead of failing silently.
+- A misconfigured device no longer prevents the remaining devices from loading.
+
+### Added
+- Last known power state is persisted in the accessory cache, so the switch shows the correct state immediately after a Homebridge restart.
+
 ## [2.0.0] - 2026-04-29
 
 ### Breaking Changes
